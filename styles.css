@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Pacifico&family=Roboto+Slab:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --bcolor: rgb(2, 135, 201);
+    --navcolor: rgb(4, 123, 182);
+}
+body {
+    background-color: var(--bcolor);
+}
+
+/*header start*/
+
+.logo img{
+    width: 150px;
+}
+.logo {
+    padding: 0px 20px ;
+    margin-right: 50px;
+}
+nav a {
+    display: block;
+    color: white;
+    font-size: 15px;
+}
+nav div {
+    text-align: center;
+    margin: 10px 30px;
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+}
+nav div:hover {
+    background-color: var(--bcolor);
+}
+nav div i {
+    color: white;
+    font-size: 20px;
+}
+nav {
+    display: flex;
+}
+header {
+    display: flex;
+    align-items: center;
+    background-color:  var(--navcolor);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+/*home start*/
+
+.homeImage img {
+    width: 100%;
+}
+.homeText {
+    text-align: center;
+    max-width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    color: white;
+}
+.homeText h1 {
+    margin-bottom: 10px;
+    font-family: pacifico;
+}
+.homeText p {
+    line-height: 30px;
+}
+.homeText p:hover, .homeText h1:hover {
+    text-shadow: -1px 0px 4px red, 0px 1px 4px red, 1px 0px 4px red, 0 -1px 4px red;
+}
+.homeVideo {
+    display: flex;
+}
+.homeVideo div video {
+    width: 90%;
+    margin: 20px;
+    border: 5px solid var(--navcolor);
+    border-radius: 5px;
+}
+
+/*shows start*/
+
+.showContainer {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.showDiv {
+    width: 250px;
+    height: 370px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.showDiv:hover {
+    transform: scale(1.1);
+}
+.showImage img {
+    width: 100%;
+    border-radius: 10px;
+}
+.showTitle {
+    color: white;
+    padding-top: 5px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.showTitle::after {
+    content: "";
+    background-color: red;
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    transition: 0.7s;}
+
+.showTitle:hover::after {
+    width: 100%;
+}
+.shows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*about start*/
+
+.aboutImage img {
+    width: 300px;
+}
+.aboutText p {
+    color: white;
+    font-size: 20px;
+}
+.aboutText {
+    margin-left: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.aboutContainer {
+    display: flex;
+    margin: 50px;
+    align-items: center;
+}
+
+/*footer start */
+
+footer {
+   margin: 50px 0px;
+}
+
+footer p {
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+footer p:hover {
+    text-shadow: 2px 2px 2px red;
+}
+
+/*media queries*/
+@media screen and (max-width:1000px) {
+    .aboutText p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .logo img{
+        width: 100px;
+    }
+    nav a {
+        font-size: 10px;
+    }
+    nav div i {
+        font-size: 15px;
+    }
+    nav div {
+        margin: 5px;
+    }
+    .homeVideo {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .aboutContainer {
+        display: block;
+        margin: 50px 0px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:610px) {
+    .logo img{
+        width: 70px;
+    }
+    nav div {
+        margin: 5px;
+        padding: 10px;
+        width: 60px;
+        border-radius: 5px;
+    }
+    .logo {
+        padding: 0px 10px ;
+        margin-right: 10px;
+    }
+}
